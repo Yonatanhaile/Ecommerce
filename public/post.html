@@ -1,26 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Post Item</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Post Item</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-    <h1>Post Your Item</h1>
-    <div class="nav-buttons">
-        <a href="/">View Items</a>
-        <a href="/post.html">Post Item</a>
-    </div>
-</header>
+  <div class="page-wrapper">
+    <header>
+      <div class="brand">
+        <h1>Post Your Item</h1>
+      </div>
 
-<form action="/post" method="POST" enctype="multipart/form-data">
-    <input type="text" name="name" placeholder="Item Name" required>
-    <textarea name="description" placeholder="Description" required></textarea>
-    <input type="file" name="image" required>
-    <input type="number" name="price" placeholder="Price" required>
-    <input type="text" name="phone" placeholder="Phone Number" required>
-    <button type="submit">Post</button>
-</form>
+      <div class="nav-buttons" role="navigation" aria-label="Main navigation">
+        <a href="/" class="btn small">View Items</a>
+        <a href="/post.html" class="btn small primary">Post Item</a>
+      </div>
+    </header>
 
+    <main>
+      <form action="/post" method="POST" enctype="multipart/form-data" class="post-form">
+        <label for="name">Item name</label>
+        <input id="name" name="name" type="text" placeholder="Item name" required>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" placeholder="Describe your item" required></textarea>
+
+        <label for="image">Photo (jpg, png)</label>
+        <input id="image" name="image" type="file" accept="image/*" required>
+
+        <label for="price">Price (ብር)</label>
+        <input id="price" name="price" type="number" inputmode="numeric" placeholder="e.g. 1500" required>
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="09xxxxxxxx" required>
+
+        <button type="submit" class="btn submit">Post</button>
+      </form>
+    </main>
+  </div>
+
+  <footer>
+    © 2025 Your Marketplace. All rights reserved.
+  </footer>
 </body>
 </html>

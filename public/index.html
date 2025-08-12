@@ -1,21 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Marketplace - View Items</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marketplace - View Items</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-    <h1>Tigray Marketplace</h1>
-    <div class="nav-buttons">
-        <a href="/">View Items</a>
-        <a href="/post.html">Post Item</a>
-    </div>
-</header>
+  <div class="page-wrapper">
+    <header>
+      <div class="brand">
+        <h1>Marketplace</h1>
+      </div>
 
+      <div class="nav-buttons" role="navigation" aria-label="Main navigation">
+        <a href="/" class="btn small">View Items</a>
+        <a href="/post.html" class="btn small primary">Post Item</a>
+        <select id="lang-select" class="lang-select" aria-label="Select language" hidden>
+          <!-- hidden because you asked to forget languages earlier -->
+        </select>
+      </div>
+    </header>
 
-<div id="items-container"></div>
-<footer>Contact the developer Telegram: @yona_tech1</footer>
-<script src="js/script.js"></script>
+    <main>
+      <div id="items-container" class="items-grid" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <footer>
+    © 2025 Contact Developer Telegram: @yona_tech1
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
