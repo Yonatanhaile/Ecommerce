@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post Item</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Post Your Item</h1>
+    <div class="nav-buttons">
+        <a href="/">View Items</a>
+        <a href="/post.html">Post Item</a>
+    </div>
+</header>
+
+<form action="/post" method="POST" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Item Name" required>
+    <textarea name="description" placeholder="Description" required></textarea>
+    <input type="file" name="image" required>
+    <input type="number" name="price" placeholder="Price" required>
+    <input type="text" name="phone" placeholder="Phone Number" required>
+    <button type="submit">Post</button>
+</form>
+
+</body>
+</html>
